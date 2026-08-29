@@ -1,0 +1,15 @@
+[project]
+name = "headerlint"
+version = "0.1.0"
+description = "Parse and check raw HTTP headers for common problems"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "anthony-m74"}]
+
+[project.scripts]
+headerlint = "headerlint.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
