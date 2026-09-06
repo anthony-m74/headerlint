@@ -76,3 +76,11 @@ with whitespace) onto the previous header's value.
 `headerlint` exits 0 when parsing succeeds and no checks fail, and 1
 otherwise - both for parse errors and for findings, so it's usable as
 a CI gate.
+
+## Development
+
+Run the test suite with:
+
+```
+python -m unittest discover
+```
