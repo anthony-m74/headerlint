@@ -2,7 +2,7 @@
 
 A small library and CLI for parsing raw HTTP header text and checking it
 for common mistakes - duplicate headers that should be unique, missing
-security headers, and so on.
+security headers, cookies missing security flags, and so on.
 
 The use case: you've got a blob of headers from `curl -I`, a browser
 devtools "copy request headers" action, or a line pulled out of a log
@@ -27,6 +27,7 @@ From a file:
 $ headerlint response.txt
 [warning] 'content-type' appears 2 times but should be unique
 [info] missing recommended security header: strict-transport-security
+[warning] cookie 'session' is missing Secure, HttpOnly, SameSite
 ```
 
 From stdin, which is the more common case in practice:
